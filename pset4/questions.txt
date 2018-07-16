@@ -1,0 +1,31 @@
+1.  If you want your program to work universally then you cant use int and other data types
+you need do use stdint.h. This gives the data type a set amount of bytes.
+
+2.  You use these variables to make sure that variable has that certain amount of bytes.
+uint16_t means that the integer has exactly 16 bytes.
+
+3.  BYTE is 1 byte
+	DWORD is 4 bytes
+	LONG is 4 bytes
+	WORD is 2 bytes
+
+4. The first two bytes of any BMP file must contain ASCII B then ASCII M.
+
+5.  bfSize is the size of the bmp file. biSize is the size of the structure.
+    Both in bytes.
+
+6.  If biHeight is negative, the image is bottom down.
+
+7.  The biBitCount member of the BITMAPINFOHEADER structure determines the number of
+bits that define each pixel and the maximum number of colors in the bitmap.
+
+8.  It will return null if the file cannot be opened or it doesn't exist.
+
+9.  The third argument to fread is always 1 because it is going throught each and every pixel.
+
+10. int padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4 = 3
+    (4 - ((3 * 3) % 4)) % 4 = 3
+
+11. fseek allows us to change the offset of a pointer.
+
+12. SEEK_CUR is the current position indicator in the file.
